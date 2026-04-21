@@ -16,3 +16,13 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Show current date and time
+        run: echo "Build started at $(date)"
+
+      - name: Check Python version
+        run: python3 --version
+
+      - name: List repository files
+        run: |
+          echo "Files in this repository:"
+          ls -la
